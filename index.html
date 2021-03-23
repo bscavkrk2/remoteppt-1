@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>Pilot BSCAV</title>  
+</head>
+
+<body>
+
+ <iframe src="https://www.vmixcall.com/" allow="camera *;microphone *" style="position:absolute;top:0;left:0;width:90%;height:95%;"></iframe> 
+
+
+	<img id="next" src="https://raw.githubusercontent.com/bscavkrk/remoteppt/main/images/next.png" width="125" height="125" align="right">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+	<img id="back" src="https://raw.githubusercontent.com/bscavkrk/remoteppt/main/images/back.png" width="125" height="125" align="right">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+	<img id="logo" src="https://raw.githubusercontent.com/bscavkrk/remoteppt/main/images/logo%20rozl%201%20alpha.png" width="125" height="89" align="right">
+	
+	
+    
+
+<script>
+
+var images = [];
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+
+//-- usage --//
+preload(
+    "https://raw.githubusercontent.com/bscavkrk/remoteppt/main/images/next.png",
+    "https://raw.githubusercontent.com/bscavkrk/remoteppt/main/images/nextclick.png",
+    "https://raw.githubusercontent.com/bscavkrk/remoteppt/main/images/back.png",
+    "https://raw.githubusercontent.com/bscavkrk/remoteppt/main/images/backclick.png",
+    "https://raw.githubusercontent.com/bscavkrk/remoteppt/main/images/logo%20rozl%201%20alpha.png"
+)
+
+//-- tu trzeba zmienic przycisk next--//
+	$("#next").mousedown(function(){
+	$.get('https://.ngrok.io/press/bank/1/2');});
+	
+
+
+$(document).ready(function()
+{
+    $("#next").mouseup(function() 
+    {
+        $(this).attr("src", "https://raw.githubusercontent.com/bscavkrk/remoteppt/main/images/next.png");
+    });
+    
+    $("#next").mousedown(function()
+    {
+        $(this).attr("src", "https://raw.githubusercontent.com/bscavkrk/remoteppt/main/images/nextclick.png");
+    });
+});
+	
+//-- tu trzeba zmienic przycisk back--//
+$("#back").mousedown(function(){
+$.get('https://.ngrok.io/press/bank/1/3');});
+
+$(document).ready(function()
+{
+    $("#back").mouseup(function() 
+    {
+        $(this).attr("src", "https://raw.githubusercontent.com/bscavkrk/remoteppt/main/images/back.png");
+    });
+    
+    $("#back").mousedown(function()
+    {
+        $(this).attr("src", "https://raw.githubusercontent.com/bscavkrk/remoteppt/main/images/backclick.png");
+    });
+});
+
+
+
+</script>
+
+</body>
+</html>
